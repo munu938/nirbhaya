@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nirbhaya Mental Health</title>
+    <link rel="shortcut icon" href="./digital_world_184571.webp" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(220, 58, 58, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-50px) translateY(-50px); }
+            100% { transform: translateX(0px) translateY(0px); }
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.6s; }
+        .section:nth-child(5) { animation-delay: 0.8s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .mission {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            margin: 2rem 0;
+        }
+
+        .mission p {
+            font-size: 1.3rem;
+            text-align: center;
+            color: #495057;
+            font-style: italic;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #667eea;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .value-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .team-section {
+            background: linear-gradient(135deg, #f1f3f4 0%, #e8eaf6 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .service-item {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #28a745;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            border-left-width: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section h2::after {
+            background: linear-gradient(45deg, #fff, #e9ecef);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .content {
+                padding: 2rem 1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Nirbhaya Mental Health</h1>
+            <p class="tagline">Empowering minds, healing hearts, building resilient communities</p>
+        </header>
+
+        <div class="content">
+            <section class="section">
+                <div class="mission">
+                    <h2>Our Mission</h2>
+                    <p>"To provide compassionate, accessible, and comprehensive mental health support that empowers individuals to overcome challenges, build resilience, and lead fulfilling lives in a safe, judgment-free environment."</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <span class="value-icon">🤝</span>
+                        <h3>Compassion</h3>
+                        <p>We approach every individual with empathy, understanding, and genuine care, creating a safe space for healing and growth.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="value-icon">🌟</span>
+                        <h3>Empowerment</h3>
+                        <p>We believe in each person's inherent strength and work to help them discover and harness their own resilience and capabilities.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="value-icon">🔒</span>
+                        <h3>Confidentiality</h3>
+                        <p>We maintain the highest standards of privacy and confidentiality, ensuring our clients feel secure in sharing their experiences.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="value-icon">🌈</span>
+                        <h3>Inclusivity</h3>
+                        <p>We welcome individuals from all backgrounds, cultures, and walks of life, celebrating diversity and promoting acceptance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Our Impact</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">5,000+</span>
+                        <div class="stat-label">Lives Touched</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <div class="stat-label">Support Groups</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <div class="stat-label">Crisis Support</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Our Services</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                        <h3>Individual Counseling</h3>
+                        <p>One-on-one therapy sessions with licensed mental health professionals tailored to your unique needs and goals.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Group Therapy</h3>
+                        <p>Supportive group sessions that foster connection, shared experiences, and collective healing.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Crisis Intervention</h3>
+                        <p>24/7 emergency support for individuals experiencing mental health crises or urgent situations.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Family Counseling</h3>
+                        <p>Comprehensive support for families navigating mental health challenges together.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Wellness Programs</h3>
+                        <p>Holistic wellness initiatives including mindfulness, stress management, and self-care workshops.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Community Outreach</h3>
+                        <p>Educational programs and awareness campaigns to reduce stigma and promote mental health literacy.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="team-section">
+                    <h2>Our Team</h2>
+                    <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; color: #495057;">
+                        Our dedicated team of mental health professionals, counselors, and support staff work together to provide comprehensive care and support.
+                    </p>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="team-photo">DR</div>
+                            <h3>Dr. Priya Sharma</h3>
+                            <p style="color: #667eea; font-weight: bold;">Clinical Director</p>
+                            <p>Licensed Clinical Psychologist with 15+ years of experience in trauma-informed care and community mental health.</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">AK</div>
+                            <h3>Arjun Kumar</h3>
+                            <p style="color: #667eea; font-weight: bold;">Senior Counselor</p>
+                            <p>Certified Mental Health Counselor specializing in anxiety, depression, and relationship therapy.</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">SG</div>
+                            <h3>Sneha Gupta</h3>
+                            <p style="color: #667eea; font-weight: bold;">Program Coordinator</p>
+                            <p>Social Worker and Program Manager overseeing community outreach and support group initiatives.</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-photo">RT</div>
+                            <h3>Rahul Tiwari</h3>
+                            <p style="color: #667eea; font-weight: bold;">Crisis Intervention Specialist</p>
+                            <p>Certified Crisis Counselor providing 24/7 emergency support and intervention services.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="contact-section">
+                    <h2>Get Started Today</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+                        Take the first step towards better mental health. Our compassionate team is here to support you on your journey to wellness.
+                    </p>
+                    <p style="margin-bottom: 2rem;">
+                        We offer flexible scheduling, sliding scale fees, and both in-person and online sessions to make mental health care accessible to everyone.
+                    </p>
+                    <a href="#contact" class="cta-button">Schedule a Consultation</a>
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                        <p><strong>Crisis Hotline:</strong> 1-800-NIRBHAYA (Available 24/7)</p>
+                        <p><strong>Email:</strong> support@nirbhayamentalhealth.org</p>
+                        <p><strong>Address:</strong> 123 Wellness Street, Mental Health District, City 12345</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
