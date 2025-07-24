@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./IMG-20250521-WA0001[1].jpg" type="image/x-icon">
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety Disorder Treatment - Find Relief and Healing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            margin: 2rem 0;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: slideInDown 1s ease 0.2s both;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease 0.4s both;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            box-shadow: 0 10px 30px rgba(116, 185, 255, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+        }
+
+        .cta-button.secondary:hover {
+            box-shadow: 0 15px 40px rgba(116, 185, 255, 0.6);
+        }
+
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .anxiety-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .anxiety-card {
+            background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .anxiety-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        .anxiety-card:hover::before {
+            transform: scale(8);
+        }
+
+        .anxiety-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(253, 121, 168, 0.4);
+        }
+
+        .anxiety-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .anxiety-card p {
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .symptom-category {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .symptom-category:hover {
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0 15px 30px rgba(116, 185, 255, 0.4);
+        }
+
+        .symptom-category h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .symptom-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .symptom-category li {
+            padding: 0.3rem 0;
+            opacity: 0.9;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .symptom-category li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .treatment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .treatment-card {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .treatment-card::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        .treatment-card:hover::after {
+            transform: scale(6);
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(162, 155, 254, 0.4);
+        }
+
+        .treatment-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .treatment-card p {
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-features {
+            position: relative;
+            z-index: 2;
+        }
+
+        .treatment-features li {
+            padding: 0.2rem 0;
+            opacity: 0.8;
+        }
+
+        .self-help-tools {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tool-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .emergency-section {
+            background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(225, 112, 85, 0.3);
+        }
+
+        .emergency-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .emergency-numbers {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .emergency-number {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            background: white;
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            transform: scale(1.2);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .emergency-numbers {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">AnxietyCare</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#types">Types</a></li>
+                <li><a href="#symptoms">Symptoms</a></li>
+                <li><a href="#treatment">Treatment</a></li>
+                <li><a href="#tools">Self-Help</a></li>
+                <li><a href="#contact">Get Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h1>Anxiety Disorder Treatment</h1>
+            <p>You don't have to face anxiety alone. Professional, compassionate care to help you reclaim your peace of mind and live freely.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">Start Treatment</a>
+                <a href="#tools" class="cta-button secondary">Self-Help Tools</a>
+            </div>
+        </section>
+
+        <div class="emergency-section">
+            <h3>🚨 Need Immediate Help?</h3>
+            <p>If you're experiencing severe anxiety, panic attacks, or thoughts of self-harm, reach out now:</p>
+            <div class="emergency-numbers">
+                <div class="emergency-number">Crisis Line: 988</div>
+                <div class="emergency-number">Emergency: 911</div>
+                <div class="emergency-number">Text HOME to 741741</div>
+            </div>
+        </div>
+
+        <section id="types" class="section">
+            <h2>Types of Anxiety Disorders</h2>
+            <div class="anxiety-types">
+                <div class="anxiety-card">
+                    <h3>🌪️ Generalized Anxiety Disorder (GAD)</h3>
+                    <p>Persistent, excessive worry about various aspects of life including work, health, family, and everyday situations. Symptoms last for months and interfere with daily activities.</p>
+                </div>
+                <div class="anxiety-card">
+                    <h3>😰 Panic Disorder</h3>
+                    <p>Recurrent, unexpected panic attacks with intense fear and physical symptoms like racing heart, sweating, and feeling of impending doom. Often leads to fear of future attacks.</p>
+                </div>
+                <div class="anxiety-card">
+                    <h3>😱 Specific Phobias</h3>
+                    <p>Intense, irrational fear of specific objects or situations such as heights, animals, flying, or medical procedures. The fear is disproportionate to actual danger.</p>
+                </div>
+                <div class="anxiety-card">
+                    <h3>👥 Social Anxiety Disorder</h3>
+                    <p>Intense fear of social situations due to concerns about being judged, embarrassed, or humiliated. Can significantly impact work, school, and relationships.</p>
+                </div>
+                <div class="anxiety-card">
+                    <h3>🏠 Agoraphobia</h3>
+                    <p>Fear of being in situations where escape might be difficult or help unavailable during a panic attack. Often involves avoiding crowded places, public transportation, or being alone outside.</p>
+                </div>
+                <div class="anxiety-card">
+                    <h3>🔄 Obsessive-Compulsive Disorder (OCD)</h3>
+                    <p>Unwanted, intrusive thoughts (obsessions) and repetitive behaviors or mental acts (compulsions) performed to reduce anxiety or prevent feared outcomes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="symptoms" class="section">
+            <h2>Common Anxiety Symptoms</h2>
+            <div class="symptoms-grid">
+                <div class="symptom-category">
+                    <h4>🧠 Mental Symptoms</h4>
+                    <ul>
+                        <li>Excessive worry or fear</li>
+                        <li>Racing thoughts</li>
+                        <li>Difficulty concentrating</li>
+                        <li>Feeling restless or on edge</li>
+                        <li>Anticipating the worst</li>
+                        <li>Irritability</li>
+                        <li>Memory problems</li>
+                    </ul>
+                </div>
+                <div class="symptom-category">
+                    <h4>💓 Physical Symptoms</h4>
+                    <ul>
+                        <li>Rapid heartbeat</li>
+                        <li>Shortness of breath</li>
+                        <li>Sweating or trembling</li>
+                        <li>Muscle tension</li>
+                        <li>Nausea or stomach upset</li>
+                        <li>Dizziness or lightheadedness</li>
+                        <li>Fatigue or insomnia</li>
+                    </ul>
+                </div>
+                <div class="symptom-category">
+                    <h4>👤 Behavioral Symptoms</h4>
+                    <ul>
+                        <li>Avoiding certain situations</li>
+                        <li>Procrastination</li>
+                        <li>Seeking constant reassurance</li>
+                        <li>Difficulty making decisions</li>
+                        <li>Restlessness or fidgeting</li>
+                        <li>Social withdrawal</li>
+                        <li>Compulsive behaviors</li>
+                    </ul>
+                </div>
+                <div class="symptom-category">
+                    <h4>🌙 Sleep & Daily Life</h4>
+                    <ul>
+                        <li>Trouble falling asleep</li>
+                        <li>Frequent waking at night</li>
+                        <li>Difficulty with work/school</li>
+                        <li>Relationship problems</li>
+                        <li>Avoiding responsibilities</li>
+                        <li>Loss of interest in activities</li>
+                        <li>Substance use as coping</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="treatment" class="section">
+            <h2>Professional Treatment Options</h2>
+            <div class="treatment-options">
+                <div class="treatment-card">
+                    <h3>🧠 Cognitive Behavioral Therapy (CBT)</h3>
+                    <p>Evidence-based therapy that helps identify and change negative thought patterns and behaviors that contribute to anxiety.</p>
+                    <ul class="treatment-features">
+                        <li>Most effective for anxiety disorders</li>
+                        <li>Teaches practical coping skills</li>
+                        <li>Usually 12-20 sessions</li>
+                        <li>Focuses on present challenges</li>
+                    </ul>
+                </div>
+                <div class="treatment-card">
+                    <h3>🌱 Exposure Therapy</h3>
+                    <p>Gradual, controlled exposure to feared situations or objects to reduce avoidance and anxiety responses over time.</p>
+                    <ul class="treatment-features">
+                        <li>Highly effective for phobias</li>
+                        <li>Builds confidence gradually</li>
+                        <li>Can be done virtually or in-person</li>
+                        <li>Long-lasting results</li>
+                    </ul>
+                </div>
+                <div class="treatment-card">
+                    <h3>💊 Medication Management</h3>
+                    <p>Anti-anxiety medications and antidepressants can help manage symptoms while learning coping strategies in therapy.</p>
+                    <ul class="treatment-features">
+                        <li>SSRIs and SNRIs commonly used</li>
+                        <li>Can provide quick symptom relief</li>
+                        <li>Best combined with therapy</li>
+                        <li>Regular monitoring needed</li>
+                    </ul>
+                </div>
+                <div class="treatment-card">
+                    <h3>🧘 Mindfulness-Based Approaches</h3>
+                    <p>Incorporates meditation, breathing techniques, and present-moment awareness to reduce anxiety and stress.</p>
+                    <ul class="treatment-features">
+                        <li>Reduces overall stress levels</li>
+                        <li>Improves emotional regulation</li>
+                        <li>Can be practiced anywhere</li>
+                        <li>Complements other treatments</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="self-help-tools">
+            <h2 style="color: white; text-align: center; margin-bottom: 1rem;">Self-Help Tools & Techniques</h2>
+            <p style="text-align: center; opacity: 0.9; margin-bottom: 2rem;">These techniques can help manage anxiety symptoms between therapy sessions or as preventive measures.</p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>🌬️ Deep Breathing Exercises</h4>
+                    <p>Try the 4-7-8 technique: Inhale for 4 counts, hold for 7, exhale for 8. Repeat 4 times to activate your body's relaxation response.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>🏃 Progressive Muscle Relaxation</h4>
+                    <p>Tense and release each muscle group for 5 seconds, starting from your toes and working up to your head. Helps release physical tension.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>📝 Thought Challenging</h4>
+                    <p>Question anxious thoughts: Is this realistic? What evidence do I have? What would I tell a friend? Replace with balanced thoughts.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>🔢 5-4-3-2-1 Grounding</h4>
+                    <p>Name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste. Brings focus back to the present moment.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>📱 Anxiety Apps</h4>
+                    <p>Headspace, Calm, DARE, and Anxiety Coach offer guided meditations, breathing exercises, and anxiety management tools.</p>
+                </div>
+                <div class="tool-card">
+                    <h4>💪 Regular Exercise</h4>
+                    <p>Just 20-30 minutes of moderate exercise can reduce anxiety symptoms. Walking, yoga, swimming, or dancing all help.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get Professional Help Today</h2>
+            <div class="contact-form">
+                <h3>Schedule Your Anxiety Assessment</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="anxiety-type">Which type of anxiety affects you most?</label>
+                        <select id="anxiety-type" name="anxiety-type">
+                            <option value="">Please select...</option>
+                            <option value="gad">Generalized Anxiety Disorder</option>
+                            <option value="panic">Panic Disorder</option>
+                            <option value="social">Social Anxiety</option>
+                            <option value="phobias">Specific Phobias</option>
+                            <option value="agoraphobia">Agoraphobia</option>
+                            <option value="ocd">OCD</option>
+                            <option value="mixed">Multiple types</option>
+                            <option value="unsure">Not sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>What symptoms are you experiencing? (Check all that apply)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="worry" name="symptoms" value="worry">
+                                <label for="worry">Excessive worry</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="panic" name="symptoms" value="panic">
+                                <label for="panic">Panic attacks</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="avoidance" name="symptoms" value="avoidance">
+                                <label for="avoidance">Avoidance behaviors</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="physical" name="symptoms" value="physical">
+                                <label for="physical">Physical symptoms</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sleep" name="symptoms" value="sleep">
+                                <label for="sleep">Sleep problems</label>
+                            </div>
