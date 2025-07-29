@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Bipolar Disorder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            color: #5a67d8;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #5a67d8;
+            padding-bottom: 10px;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .symptom-category {
+            margin-bottom: 25px;
+        }
+
+        .symptom-category h3 {
+            color: #e53e3e;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #fed7d7;
+            border-radius: 8px;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .symptom-category.manic h3 {
+            color: #d69e2e;
+            background: #fefcbf;
+            border-left-color: #d69e2e;
+        }
+
+        .symptom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .symptom-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .symptom-list li:before {
+            content: "•";
+            color: #5a67d8;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .risk-factors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .risk-category {
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .risk-category h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .type-card {
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #cbd5e0;
+        }
+
+        .type-card.bipolar-1 {
+            background: linear-gradient(135deg, #fbb6ce, #f687b3);
+            border-color: #ed64a6;
+        }
+
+        .type-card.bipolar-2 {
+            background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+            border-color: #7c3aed;
+        }
+
+        .type-card.cyclothymic {
+            background: linear-gradient(135deg, #63b3ed, #4299e1);
+            border-color: #3182ce;
+        }
+
+        .type-card h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .type-card p {
+            color: white;
+            font-size: 0.95rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .help-section {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .help-section h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255,255,255,0.3);
+            margin-bottom: 20px;
+        }
+
+        .emergency-info {
+            background: #fed7d7;
+            border: 2px solid #e53e3e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .emergency-info h3 {
+            color: #c53030;
+            margin-bottom: 10px;
+        }
+
+        .emergency-info p {
+            color: #742a2a;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Understanding Bipolar Disorder</h1>
+            <p>Comprehensive information about symptoms, statistics, and support</p>
+        </div>
+
+        <div class="content-grid">
+            <!-- About Section -->
+            <div class="card">
+                <h2>What is Bipolar Disorder?</h2>
+                <p>Bipolar disorder is a mental health condition characterized by extreme mood swings that include emotional highs (mania or hypomania) and lows (depression). These mood shifts can affect sleep, energy levels, activity, judgment, behavior, and the ability to think clearly.</p>
+                
+                <p>Episodes of mood swings may occur rarely or multiple times a year. While most people will experience some emotional symptoms between episodes, some may not experience any symptoms at all.</p>
+
+                <div class="types-grid">
+                    <div class="type-card bipolar-1">
+                        <h4>Bipolar I Disorder</h4>
+                        <p>Defined by manic episodes that last at least 7 days or are severe enough to require immediate hospital care. Depressive episodes also occur, typically lasting at least 2 weeks.</p>
+                    </div>
+                    <div class="type-card bipolar-2">
+                        <h4>Bipolar II Disorder</h4>
+                        <p>Defined by a pattern of depressive episodes and hypomanic episodes, but not the full-blown manic episodes that are typical of Bipolar I.</p>
+                    </div>
+                    <div class="type-card cyclothymic">
+                        <h4>Cyclothymic Disorder</h4>
+                        <p>Defined by periods of hypomanic symptoms as well as periods of depressive symptoms lasting for at least 2 years (1 year in children and adolescents).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="card">
+                <h2>Statistics & Prevalence</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">2.8%</span>
+                        <div class="stat-label">of U.S. adults experience bipolar disorder each year</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.4%</span>
+                        <div class="stat-label">lifetime prevalence among U.S. adults</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25</span>
+                        <div class="stat-label">average age of onset</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">83%</span>
+                        <div class="stat-label">of cases are classified as severe</div>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 20px;"><strong>Key Facts:</strong></p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>Affects men and women equally</li>
+                    <li>Usually begins in late teens or early adult years</li>
+                    <li>At least half of all cases start before age 25</li>
+                    <li>Some people have their first symptoms during childhood</li>
+                    <li>Affects approximately 45 million people worldwide</li>
+                </ul>
+            </div>
+
+            <!-- Risk Factors Section -->
+            <div class="card">
+                <h2>Risk Factors</h2>
+                <p>Several factors may increase the risk of developing bipolar disorder or act as triggers for the first episode:</p>
+                
+                <div class="risk-factors">
+                    <div class="risk-category">
+                        <h4>🧬 Genetic Factors</h4>
+                        <p>Having a first-degree relative (parent, sibling) with bipolar disorder increases risk. However, most people with a family history do not develop the condition.</p>
+                    </div>
+                    
+                    <div class="risk-category">
+                        <h4>🧠 Brain Structure</h4>
+                        <p>Research shows some structural and functional differences in the brains of people with bipolar disorder compared to those without.</p>
+                    </div>
+                    
+                    <div class="risk-category">
+                        <h4>⚡ Stress & Trauma</h4>
+                        <p>High stress, traumatic events, or major life changes can trigger the first episode in vulnerable individuals.</p>
+                    </div>
+                    
+                    <div class="risk-category">
+                        <h4>💊 Substance Use</h4>
+                        <p>Drug or alcohol abuse can trigger or worsen bipolar symptoms and may interfere with treatment.</p>
+                    </div>
+                    
+                    <div class="risk-category">
+                        <h4>🏥 Medical Conditions</h4>
+                        <p>Certain medical conditions like stroke, brain injury, or other neurological conditions may increase risk.</p>
+                    </div>
+                    
+                    <div class="risk-category">
+                        <h4>💊 Medications</h4>
+                        <p>Some medications, particularly antidepressants, may trigger manic episodes in susceptible individuals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Symptoms Section -->
+            <div class="card">
+                <h2>Signs & Symptoms</h2>
+                <p>Bipolar disorder symptoms vary depending on the type of episode - manic, hypomanic, or depressive.</p>
+
+                <div class="symptom-category manic">
+                    <h3>Manic Episode Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Elevated, expansive, or irritable mood</li>
+                        <li>Increased energy and activity levels</li>
+                        <li>Decreased need for sleep (feeling rested after 3 hours)</li>
+                        <li>Grandiose thoughts or inflated self-esteem</li>
+                        <li>More talkative than usual or pressure to keep talking</li>
+                        <li>Racing thoughts or flight of ideas</li>
+                        <li>Distractibility</li>
+                        <li>Increased goal-directed activity</li>
+                        <li>Risky behavior with potential negative consequences</li>
+                        <li>Psychosis (in severe cases)</li>
+                    </ul>
+                </div>
+
+                <div class="symptom-category">
+                    <h3>Hypomanic Episode Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Similar to manic symptoms but less severe</li>
+                        <li>Noticeable change in functioning</li>
+                        <li>Others can observe the mood change</li>
+                        <li>Does not cause marked impairment</li>
+                        <li>No psychotic features</li>
+                        <li>Does not require hospitalization</li>
+                    </ul>
+                </div>
+
+                <div class="symptom-category">
+                    <h3>Depressive Episode Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Persistent sad, empty, or hopeless mood</li>
+                        <li>Loss of interest in activities once enjoyed</li>
+                        <li>Significant weight loss or gain</li>
+                        <li>Sleep disturbances (insomnia or hypersomnia)</li>
+                        <li>Fatigue or loss of energy</li>
+                        <li>Feelings of worthlessness or excessive guilt</li>
+                        <li>Difficulty concentrating or making decisions</li>
+                        <li>Psychomotor agitation or retardation</li>
+                        <li>Recurrent thoughts of death or suicide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="help-section">
+            <h2>Getting Help & Treatment</h2>
+            <p>Bipolar disorder is a lifelong condition, but it can be effectively managed with proper treatment. Most people with bipolar disorder can achieve substantial stabilization of their mood swings and related symptoms with proper treatment.</p>
+            
+            <p style="margin-top: 15px;"><strong>Treatment typically includes:</strong> Medication (mood stabilizers, antipsychotics, antidepressants), Psychotherapy (cognitive behavioral therapy, family therapy), Lifestyle changes (regular sleep, exercise, stress management), and Support groups.</p>
+            
+            <div class="emergency-info">
+                <h3>⚠️ Emergency Situations</h3>
+                <p><strong>Seek immediate help if you or someone you know is having thoughts of suicide or self-harm.</strong></p>
+                <p><strong>National Suicide Prevention Lifeline: 988</strong></p>
+                <p><strong>Crisis Text Line: Text HOME to 741741</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
